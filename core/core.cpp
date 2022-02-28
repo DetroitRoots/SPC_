@@ -102,7 +102,7 @@ void tutorial()
     std::this_thread::sleep_for (std::chrono::seconds(2));
     std::cout<<". ";
     std::this_thread::sleep_for (std::chrono::milliseconds(700));
-    std::cout<<" .."<<std::end;//check
+    std::cout<<" .."<<std::endl;
 
 
 
