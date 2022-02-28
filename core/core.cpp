@@ -133,4 +133,14 @@ void tutorial()
     
 }
 
-//Finish the intro, make a plan for objects.
+// Priority: Finish the intro, make a plan for objects.
+
+/* 
+
+Fix needed    
+    L 6 - 12 objects
+    L 29 int comd
+    L 74
+    L 96
+
+    */
