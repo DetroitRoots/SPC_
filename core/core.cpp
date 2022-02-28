@@ -59,7 +59,7 @@ void inv3ntory()
  std::cout<<std::endl;
 }
 
-void tutorial()
+void intro()
 {
     std::cout<<"New movement detected!"<<std::endl;
     std::this_thread::sleep_for (std::chrono::seconds (2));
@@ -103,9 +103,11 @@ void tutorial()
     std::cout<<". ";
     std::this_thread::sleep_for (std::chrono::milliseconds(700));
     std::cout<<" .."<<std::endl;
+}
 
 
-
+void tutorial()
+{
 
     
     //This is Enigma. An early stage AI to assist you in this journey"<<std::endl;
@@ -130,3 +132,5 @@ void tutorial()
 
     
 }
+
+//Finish the intro, make a plan for objects.
