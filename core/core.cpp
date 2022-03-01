@@ -109,31 +109,33 @@ void intro()
 void tutorial()
 {
 
-    
-    //This is Enigma. An early stage AI to assist you in this journey"<<std::endl;
-    std::this_thread::sleep_for (std::chrono::seconds(1));
-    std::cout<<"There are several commands that you should learn in order to play.  \n";
-    std::this_thread::sleep_for (std::chrono::nanoseconds(5000));
-    //std::cout<<"I suggest you to "
-    std::this_thread::sleep_for (std::chrono::seconds(5));
-    std::cout<<"Use arrow keys to move around\n";
+    std::cout<<"Welcome aboard commander. This is Enigma. The AI that powers Arch.  "<<std::endl;
+    std::cout<<""<<std::endl;
+    std::cout<<"First, I'll show you arouund \n";
     std::this_thread::sleep_for (std::chrono::seconds(3));
-    std::cout<<"To use an item type 'u'. \n";
-    std::this_thread::sleep_for (std::chrono::seconds(3));
-    std::cout<<"If you are next to an interactable item, and you have an item in your hand that can be used together "<<std::endl;
+    std::cout<<"You're in the command center. This is where you control Arch." <<std::endl;
+    std::this_thread::sleep_for (std::chrono::seconds(2));
+    std::cout<<"There are several commands that you should learn in order to move around.  \n"; //EXPECT: command centr to advance.
     std::this_thread::sleep_for (std::chrono::nanoseconds(5000));
-    std::cout<<"you can do interact just by typing 'u'\n";
-    std::this_thread::sleep_for (std::chrono::seconds(4));
-    std::cout<<"If you want to pickup an item, type 'p' \n";
-
-
-
-
-
-    
+    std::cout<<"Use arrow keys to move around\n";//move
+    std::this_thread::sleep_for (std::chrono::seconds(3));
+    std::cout<<"To use an item from your inventory, press 'u'. \n";//use 
+    std::this_thread::sleep_for (std::chrono::seconds(3));
+    std::cout<<"You can also use an item from your inventory together with another item that is not in your inventory with the same command. "<<std::endl;
+    std::this_thread::sleep_for (std::chrono::nanoseconds(5000));
+    std::cout<<"press 'a' to analyze an item. \n"; //analyze
+    std::this_thread::sleep_for (std::chrono::seconds(3));
+    std::cout<<"If you want to pickup an item, press 'p' \n";
+    std::this_thread::sleep_for (std::chrono::seconds(3));
+    std::cout<<"That's all. If you want to see this window again, just press 'h' for help"<<std::endl;
+    std::this_thread::sleep_for (std::chrono::milliseconds(700));  
 }
 
+
+
+
 // Priority: Finish the intro, make a plan for objects.
+// How to introduce the story to the player...?
 
 /* 
 
