@@ -3,32 +3,34 @@
 #include <chrono>
 #include <vector>
 
+//dry the code when you finish
 
 //spaceship
-bool command_center_on = false, main_door = false, 
+static bool spaceship = true;
+bool command_center_on = false, main_door = false, spaceship_batteries = false, engines = false,
 //humans
 ground_control = false, family = false,
 //small objects in spaceship
-radio_found = false, engines = false, music_radio = false, lintern = false, 
-//violence
+radio_found = false, music_radio = false, lintern = false, 
+//violence | adding guns but I didn't add any enemy, is he gonna kill himself or what?
 plasma_gun = false, migr_x_gun = false, metich_bomb = false, prnl_grnd= false, molotov = false, 
 //consumable
-anticold = false,
-//main character.
-capsule = false , space_suit = true, oxygen = true, health = true , shield = true, batteries = true; 
+anticold = false, health_pill = false, painkiller = false, chocolate = false, protein_pill = false,
+//main character
+capsule = false , space_suit = true, oxygen = true, health = true , shield = true, visoe = false, suit_batteries = false, sleep= false;
 
 
 
+//:::Add interactable objets::: feel like still so less, wanna add like 1000 at least.
 
-//:::Add interactable objets:::
 
-
-int _hP = 5000; //vulnerable
+int _hP = 5000; //vulnerable // character should be able to improve. | add more characters?
 int _xP = 0;
 int _ShielDCount_iron = 10000;
 float ShielDCount_titanium = 18.000;
 float oxygenLevel = 15.000;
 float bATerries = 15.000;
+float sTreNgHT= 3000; //this is power
 std::vector<std::string> inventory;
 std::vector<std::string> cargo_bay;
 std::vector<std::string> research_points;
@@ -133,7 +135,8 @@ void tutorial()
     std::this_thread::sleep_for (std::chrono::seconds(3));
     std::cout<<"You can also use an item from your inventory together with another item that is not in your inventory with the same command. "<<std::endl;
     std::this_thread::sleep_for (std::chrono::nanoseconds(5000));
-    std::cout<<"press 'a' to analyze an item. \n"; //analyze
+    std::cout<<"press 'a' to analyze an item." <<std::endl;
+    std::cout<<"if you are not sure what to do in a certain please, don't forget to analyze \n";
     std::this_thread::sleep_for (std::chrono::seconds(3));
     std::cout<<"If you want to pickup an item, press 'p' \n";
     std::this_thread::sleep_for (std::chrono::seconds(3));
@@ -142,18 +145,28 @@ void tutorial()
 }
 
 
+void dormitories()
+{
+
+        std::cout<<"Dormitories \n";
+        std::this_thread::sleep_for (std::chrono::seconds(5));
+        std::cout<<"This is where your capsule is, you can sleep here."<<std::endl;
+        std::cout<<"Meanwhile you walk between the capsules and tubes, you started feeling cold in this metal tube \n";
+        std::cout<<"you are the only human being in the vacuum of space."<<std::endl;
+        std::this_thread::sleep_for (std::chrono::milliseconds(700));
+        std::cout<<"or are you? ";
+        std::this_thread::sleep_for (std::chrono::seconds(1));
+        std::cout<<". ";
+        std::this_thread::sleep_for (std::chrono::seconds(1));
+        std::cout<<" .";
+        std::this_thread::sleep_for (std::chrono::milliseconds(700));
+        std::cout<<"  .";
+        std::this_thread::sleep_for (std::chrono::milliseconds(700));
+        
 
 
-// Priority: Finish the intro, make a new plan for objects.
-// How to introduce the story to the player...?
 
-/* 
 
-Fix needed    
-    L 6 - 12 objects
-    L 29 int comd
-    L 31 - 44 improve with a better design.
-    L 74
-    L 96
+}    //exits to where?
 
-    */
+    
