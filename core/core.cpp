@@ -3,13 +3,25 @@
 #include <chrono>
 #include <vector>
 
-/*add more bools and fix this mess
 
-bool command_center_on = false, radio_found = false, batteries_on = false, 
-capsule = true , space_suit = true, oxygen = true, health = true, shield = true, batteries = true;  //check T/F validity. 
+//spaceship
+bool command_center_on = false, main_door = false, 
+//humans
+ground_control = false, family = false,
+//small objects in spaceship
+radio_found = false, engines = false, music_radio = false, lintern = false, 
+//violence
+plasma_gun = false, migr_x_gun = false, metich_bomb = false, prnl_grnd= false, molotov = false, 
+//consumable
+anticold = false,
+//main character.
+capsule = false , space_suit = true, oxygen = true, health = true , shield = true, batteries = true; 
 
-:::Add interactable objets:::
-*/
+
+
+
+//:::Add interactable objets:::
+
 
 int _hP = 5000; //vulnerable
 int _xP = 0;
@@ -28,6 +40,7 @@ using namespace std::this_thread;
 
 //add int cmnd
 
+/* 
 void command_center();
 void engine_room();
 void dormitories();
@@ -37,13 +50,10 @@ void earth();
 void planet_dwarf();
 void planet_gasgiant();
 void moon();
-void sun();
-void ocean();
 void universe();
 void space_craft();
 void spAce_vacum();
-void black_hole();
-
+*/
 void inv3ntory()
 {
  std::cout<<std::endl;
@@ -134,7 +144,7 @@ void tutorial()
 
 
 
-// Priority: Finish the intro, make a plan for objects.
+// Priority: Finish the intro, make a new plan for objects.
 // How to introduce the story to the player...?
 
 /* 
@@ -142,6 +152,7 @@ void tutorial()
 Fix needed    
     L 6 - 12 objects
     L 29 int comd
+    L 31 - 44 improve with a better design.
     L 74
     L 96
 
