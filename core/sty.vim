@@ -1,6 +1,9 @@
 //
 
 ::ENIGMA AI
-        graphs.
+        graphs
         Unity_engn
         
+::Arch
+        auto
+        char_inpt
