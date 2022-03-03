@@ -30,12 +30,13 @@ int _ShielDCount_iron = 10000;
 float ShielDCount_titanium = 18.000;
 float oxygenLevel = 15.000;
 float bATerries = 15.000;
-float sTreNgHT= 3000; //this is power
+float sTreNgTH= 3000; //this is power
 std::vector<std::string> inventory;
 std::vector<std::string> cargo_bay;
 std::vector<std::string> research_points;
 std::vector<std::string> xp;
 std::vector<std::string> hp;
+
 
 
 using namespace std::this_thread;
@@ -162,7 +163,52 @@ void dormitories()
         std::this_thread::sleep_for (std::chrono::milliseconds(700));
         std::cout<<"  .";
         std::this_thread::sleep_for (std::chrono::milliseconds(700));
+        inv3ntory ();
+        std::string command;
+        bool standby = true;
+        while (standby) 
+        {
+            std::cout<<"Command: "<<std::endl;
+            std::cin>>command;
+            if (command  == "h")
+            {
+                std::cout<<"serve yourself, I ain't gonna tell you what to do."<<std::endl;
+                std::cout<<"I'm not getting paid to tell everything you need, the help service is when I want not when you want."<<std::endl;
+                std::cout<<"discover yourself. "<<std::endl;
+                std::this_thread::sleep_for (std::chrono::milliseconds(700));
+                std::cout<<" ."<<std::endl;
+                std::this_thread::sleep_for (std::chrono::milliseconds(700));
+                std::cout<<"  ."<<std::endl;                
+            }
+             else if (command == "a")
+                {
+                    
+                
+                    std::cout<<"You are in dormitories. \n";
+                    std::this_thread::sleep_for(std::chrono::nanoseconds(1000));
+                    std::cout<<"there are two sleeping capsules here. One is yours.\n";
+                    std::cout<<"And the other one is for the astronout that will come "<<std::endl;
+                    std::this_thread::sleep_for (std::chrono::seconds(2));
+                    std::cout<<"Only 5  days left for her docking. When she comes, she will sleep threre"<<std::endl;
+                    std::this_thread::sleep_for (std::chrono::milliseconds(700));
+                    std::cout<<"anything else you want to do? "<<std::endl;
+                }
+                else if (command == "p")
+                {
+                    std::cout<<"spacesuit added to your inventory. "<<std::endl;
+                    inventory.push_back("spacesuit");
+                    std::this_thread::sleep_for (std::chrono::milliseconds(1900));
+                    std::cout<<"Keep checking, this can't be the only thing here "<<std::endl;
+
+
+                }
+
+        } 
+
         
+
+        
+
 
 
 
