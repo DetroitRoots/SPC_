@@ -50,3 +50,29 @@ int main ()
     }
     return 0;
 }
+unsigned char getArrow()
+{
+    if(kbhit()) //if key is pressed.
+    {
+        unsigned char ch= getch();
+        if  (ch == 0x00)
+        {
+            ch = getch();
+            switch(ch)
+            {
+                case ARROW_UP:
+                return ch;
+                case ARROW_LEFT:
+                return ch;
+                case ARROW_RIGHT:
+                return ch;
+                case ARROW_DOWN:
+                return ch;
+                default:
+                return ARROW_NONE;
+            }
+        }
+        return ch;
+    }
+    return ARROW_NONE;
+}
