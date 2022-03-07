@@ -130,13 +130,13 @@ void tutorial()
     std::this_thread::sleep_for (std::chrono::seconds(2));
     std::cout<<"There are several commands that you should learn in order to move around.  \n"; //EXPECT: command centr to advance.
     std::this_thread::sleep_for (std::chrono::nanoseconds(5000));
-    std::cout<<"Use arrow keys to move around\n";//move
+    std::cout<<"Use 'w,a,s,d' keys to move around\n";//move
     std::this_thread::sleep_for (std::chrono::seconds(3));
     std::cout<<"To use an item from your inventory, press 'u'. \n";//use 
     std::this_thread::sleep_for (std::chrono::seconds(3));
     std::cout<<"You can also use an item from your inventory together with another item that is not in your inventory with the same command. "<<std::endl;
     std::this_thread::sleep_for (std::chrono::nanoseconds(5000));
-    std::cout<<"press 'a' to analyze an item." <<std::endl;
+    std::cout<<"press 'x' to analyze an item." <<std::endl;
     std::cout<<"if you are not sure what to do in a certain please, don't forget to analyze \n";
     std::this_thread::sleep_for (std::chrono::seconds(3));
     std::cout<<"If you want to pickup an item, press 'p' \n";
@@ -180,7 +180,7 @@ void dormitories()
                 std::this_thread::sleep_for (std::chrono::milliseconds(700));
                 std::cout<<"  ."<<std::endl;                
             }
-            else if (command == "a")
+            else if (command == "x")
             {
                 std::cout<<"You are in dormitories. \n";
                     std::this_thread::sleep_for(std::chrono::nanoseconds(1000));
@@ -198,7 +198,43 @@ void dormitories()
                     std::this_thread::sleep_for (std::chrono::milliseconds(1900));
                     std::cout<<"Keep checking, this can't be the only thing here "<<std::endl;
             }
-
+            else if (command == "w")
+            {
+                standby = false;
+                std::cout<< std::string (50, '\n');
+                engine_room();
+                std::cout<<"You came to the engine room"<<std::endl;
+                std::this_thread::sleep_for (std::chrono::seconds(2));
+                std::cout<<"Do you want to do anything here?"<<std::endl;
+                std::this_thread::sleep_for (std::chrono::seconds(1));
+                std::cout<<"Type "<<std::endl;
+                std::cout<<"yes"<<std::endl;
+                std::cout<<"no"<<std::endl;
+                ///you can also change the void? but you wanna edo it here then?
+                if (command == "yes")
+                {
+                std::cout<<"Choose action (type the number)"<<std::endl;
+                std::this_thread::sleep_for (std::chrono::milliseconds(700));
+                std::cout<<"1 - Check the Engine's condition "<<std::endl;
+                std::cout<<"2 - Look Around "<<std::endl;
+                std::cout<<"3 - Nevermind "<<std::endl;
+                }
+                else if (command == "1")
+                {
+                    std::cout<<"Engines are in optimum condition and they can be started from command center\n";
+                    std::this_thread::sleep_for (std::chrono::seconds(1));
+                    std::cout<<"But do you even know where to go in the vacuum of space though? "<<std::endl;
+                }
+                else if (command == "2", command =="p")
+                {
+                    std::cout<<"You walk around this giant engineering masterpiece"<<std::endl;
+                    //continue 
+                }
+                else (command == "no");
+                {
+                    std::cout<<"It's okay. "<<std::endl;
+                }
+            }
         } 
     }
 
