@@ -17,7 +17,7 @@ plasma_gun = false, migr_x_gun = false, metich_bomb = false, prnl_grnd= false, m
 //consumable
 anticold = false, health_pill = false, painkiller = false, chocolate = false, protein_pill = false,
 //main character
-capsule = false , space_suit = true, oxygen = true, health = true , shield = true, visoe = false, suit_batteries = false, sleep= false;
+capsule = false , space_suit = true, oxygen = true, health = true , shield = true, visor = false, suit_batteries = false, sleep= false;
 
 
 
@@ -41,12 +41,14 @@ std::vector<std::string> hp;
 
 using namespace std::this_thread;
 
+
 //add int cmnd
 
 
 void command_center();
 void engine_room();
 void dormitories();
+void arsenal();
 void coms_center();
 void lab_center();
 void earth();
@@ -71,53 +73,6 @@ void inv3ntory()
  }
  std::cout<<std::endl;
 }
-
-void intro()
-{
-    std::cout<<"New movement detected!"<<std::endl;
-    std::this_thread::sleep_for (std::chrono::seconds (2));
-    std::cout<<"Face detectors are activated \n";
-    std::this_thread::sleep_for (std::chrono::milliseconds(700));
-    std::cout<<"Detected lifeform:  ";
-    std::this_thread::sleep_for (std::chrono::milliseconds(700));
-    std::cout<<" Human. ";
-    std::this_thread::sleep_for (std::chrono::seconds(3));
-    std::cout<<"Arc defense systems are active. Please be calm. You are being surveilled by  ";
-    std::this_thread::sleep_for (std::chrono::milliseconds(700));
-    std::cout<<" Arc Defense and Protection System developed by // ??? . "<< std::endl; //find a cool name here.
-    std::this_thread::sleep_for (std::chrono::seconds(1));
-    std::cout<<"All the commmand functions are idle and blocked for safety reasons. \n";
-    std::this_thread::sleep_for (std::chrono::milliseconds(700));
-    std::cout<<"The spaceship is currently under control of the AI."<<std::endl;
-    std::this_thread::sleep_for (std::chrono::milliseconds(700));
-    std::cout<<"Only the assigned commander of this spaceship can take control"<<std::endl;
-    std::this_thread::sleep_for (std::chrono::seconds(2));
-    
-    char aCCess_c0de;
-    
-    std::cout<<"Enter the code to access. (A single character)  "<<std::endl;
-    std::this_thread::sleep_for (std::chrono::nanoseconds(3000));
-    std::cin>> aCCess_c0de;
-    std::cout<<"Code Number " << aCCess_c0de << ":" << (int)aCCess_c0de;
-    std::this_thread::sleep_for (std::chrono::milliseconds(1500));
-    std::cout<<"Analyzing the access code "<<std::endl;
-    std::this_thread::sleep_for (std::chrono::seconds(1));
-    std::cout<<".";
-    std::this_thread::sleep_for (std::chrono::seconds(1));
-    std::cout<<" .";
-    std::this_thread::sleep_for (std::chrono::seconds(1));
-    std::cout<<" ."<<std::endl;    //some sound effect would be nice here...
-    std::this_thread::sleep_for (std::chrono::seconds(3));
-    std::cout<<"Access granted \n";
-    std::this_thread::sleep_for (std::chrono::nanoseconds(8000));
-    std::cout<<"Initializing Enigma and giving access to the command center."<<std::endl;
-    std::cout<<"Starting in "<<std::endl;
-    std::this_thread::sleep_for (std::chrono::seconds(2));
-    std::cout<<". ";
-    std::this_thread::sleep_for (std::chrono::milliseconds(700));
-    std::cout<<" .."<<std::endl;
-}
-
 
 void tutorial()
 {
@@ -197,8 +152,13 @@ void dormitories()
                     inventory.push_back("spacesuit");
                     std::this_thread::sleep_for (std::chrono::milliseconds(1900));
                     std::cout<<"Keep checking, this can't be the only thing here "<<std::endl;
-            }
-            else if (command == "w")
+                    break;
+            } 
+        }
+}
+
+
+            /* else if (command == "w")
             {
                 standby = false;
                 std::cout<< std::string (50, '\n');
@@ -210,7 +170,7 @@ void dormitories()
                 std::cout<<"Type "<<std::endl;
                 std::cout<<"yes"<<std::endl;
                 std::cout<<"no"<<std::endl;
-                ///you can also change the void? but you wanna edo it here then?
+                ///you can also change the void? but you wanna do it here then?
                 if (command == "yes")
                 {
                 std::cout<<"Choose action (type the number)"<<std::endl;
@@ -228,11 +188,36 @@ void dormitories()
                 else if (command == "2", command =="p")
                 {
                     std::cout<<"You walk around this giant engineering masterpiece"<<std::endl;
+                    std::this_thread::sleep_for (std::chrono::milliseconds(700));
+                    std::cout<<"and it makes you think if the technology used to make this giant machine"<<std::endl;
+                    std::cout<<"used to solve the problems the world is facing, would it be necessary for you to be in space and do this research? "<<std::endl;
+                    std::this_thread::sleep_for (std::chrono::seconds(1));
+                    std::cout<<"You found a flashlight. Do you want to take it?"<<std::endl;
+                    //can push help
                     //continue 
                 }
-                else (command == "no");
+                else if (command == "p");
                 {
-                    std::cout<<"It's okay. "<<std::endl;
+                    std::cout<<"Flashlight is added in your inventory."<<std::endl;
+                    inventory.push_back("flashlight");
+                }
+                std::cout<<"You saw some footsteps on the ground. But how is that possible?"<<std::endl;
+                std::cout<<"You're the only person in this spacecrat."<<std::endl;
+                std::this_thread::sleep_for (std::chrono::seconds (1));
+                std::cout<<".";
+                std::this_thread::sleep_for (std::chrono::seconds(1));
+                std::cout<<" .";
+                std::this_thread::sleep_for (std::chrono::seconds(1));
+                std::cout<<"  ."<<std::endl;
+                std::this_thread::sleep_for (std::chrono::seconds(3));
+
+
+
+
+
+                //else (command == "no");
+                {
+                    std::cout<<"It's okay. "<<std::endl; 
                 }
             }
         } 
@@ -240,4 +225,80 @@ void dormitories()
 
 }
 
+*/
+
+
+
+int main() 
+{
+  std::cout<<"New movement detected!"<<std::endl;
+    std::this_thread::sleep_for (std::chrono::seconds (2));
+    std::cout<<"Face detectors are activated \n";
+    std::this_thread::sleep_for (std::chrono::milliseconds(700));
+    std::cout<<"Detected lifeform:  ";
+    std::this_thread::sleep_for (std::chrono::milliseconds(700));
+    std::cout<<" Human. ";
+    std::this_thread::sleep_for (std::chrono::seconds(3));
+    std::cout<<"Arc defense systems are active. Please be calm. You are being surveilled by  ";
+    std::this_thread::sleep_for (std::chrono::milliseconds(700));
+    std::cout<<" Arc Defense and Protection System developed by ::ge_dev::"<< std::endl; //find a cool name here.
+    std::this_thread::sleep_for (std::chrono::seconds(1));
+    std::cout<<"All the commmand functions are idle and blocked for safety reasons. \n";
+    std::this_thread::sleep_for (std::chrono::milliseconds(700));
+    std::cout<<"The spaceship is currently under control of the AI."<<std::endl;
+    std::this_thread::sleep_for (std::chrono::milliseconds(700));
+    std::cout<<"Only the assigned commander of this spaceship can take control"<<std::endl;
+    std::this_thread::sleep_for (std::chrono::seconds(2));
     
+    char aCCess_c0de;
+    
+    std::cout<<"Enter the code to access. (A single character)  "<<std::endl;
+    std::this_thread::sleep_for (std::chrono::nanoseconds(3000));
+    std::cin>> aCCess_c0de;
+    std::cout<<"Code Number " << aCCess_c0de << ":" << (int)aCCess_c0de;
+    std::this_thread::sleep_for (std::chrono::milliseconds(1500));
+    std::cout<<"Analyzing the access code "<<std::endl;
+    std::this_thread::sleep_for (std::chrono::seconds(1));
+    std::cout<<".";
+    std::this_thread::sleep_for (std::chrono::seconds(1));
+    std::cout<<" .";
+    std::this_thread::sleep_for (std::chrono::seconds(1));
+    std::cout<<" ."<<std::endl;    //some sound effect would be nice here...
+    std::this_thread::sleep_for (std::chrono::seconds(3));
+    std::cout<<"Access granted \n";
+    std::this_thread::sleep_for (std::chrono::nanoseconds(8000));
+    std::cout<<"Initializing Enigma and giving access to the command center."<<std::endl;
+    std::cout<<"Starting in "<<std::endl;
+    std::this_thread::sleep_for (std::chrono::seconds(2));
+    std::cout<<". ";
+    std::this_thread::sleep_for (std::chrono::milliseconds(700));
+    std::cout<<" .."<<std::endl;
+  
+  
+  
+  //std::cout << "Hello There!\nWelcome to Leprechaun Hunt.\nThis is a text adventure game where you explore rooms to capture the leprechaun. If you haven't played before, please read the instructions so you won't be confused\n";
+  //std::this_thread::sleep_for (std::chrono::seconds(3));
+  char skip;
+  bool valid = false;
+  while (!valid) 
+  {
+    std::cout << "enter 's' to skip the instructions, otherwise, enter 'i'\n";
+    std::cin >> skip;
+    if (skip == 'i') {
+      valid = true;
+      tutorial();
+      std::cout << "It's just the begining.";
+      std::cout << __STRING (50)<<std::endl;
+      std::cout << "You are transported to the main room in the spacecraft: ";
+      dormitories();
+    } else if (skip == 's'){
+      valid = true;
+      std::cout << "It's just the begining.\n";
+      std::cout << __STRING (50)<<std::endl;
+      std::cout << "You are transported to the main room in the spacecraft.";
+      dormitories();
+    } else {
+      std::cout << "Unauthorized. \n";
+    }
+  }
+}
