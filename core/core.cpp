@@ -23,7 +23,7 @@ capsule = false , space_suit = true, oxygen = true, health = true , shield = tru
 
 //:::Add interactable objets::: feel like still so less, wanna add like 1000 at least.
 
-
+int input();
 int _hP = 5000; //vulnerable // character should be able to improve. | add more characters?
 int _xP = 0;
 int _ShielDCount_iron = 10000;
@@ -152,25 +152,103 @@ void dormitories()
                     inventory.push_back("spacesuit");
                     std::this_thread::sleep_for (std::chrono::milliseconds(1900));
                     std::cout<<"Keep checking, this can't be the only thing here "<<std::endl;
-                    break;
             } 
         }
 }
 
+void engine_room()
+{
+    bool standby = false;
+    bool valid = false;
+    std::string command;
+    int choice, num;
+    
+    std::cout<< std::string (50, '\n');
+    engine_room();  //check
+    std::cout<<"You came to the engine room"<<std::endl; //bug here, yes/no for what?
+    std::this_thread::sleep_for (std::chrono::seconds(2));
+    std::cout<<"Type : "<<std::endl;
+    std::cout<<"yes "<<std::endl;
+    std::cout<<"no "<<std::endl;
+    if (command == "yes")
+    {
+        std::cout<<"Choose action - Type the number"<<std::endl;
+        std::this_thread::sleep_for (std::chrono::microseconds(700));
+        std::cout<<"1- Maintance and Check Engine's Conditions (Warning, checking everything takes a while)"<<std::endl;
+        std::cout<<"2- Look Around"<<std::endl;
+        std::cout<<"3- Check inventory"<<std::endl;
+        std::cout<<"4- Nevermind"<<std::endl;
+        
+        choice = input();
+        switch (choice)
+        //add switches for the engine check.
+        case 1:
+        {
+            int choice2, num;
+            choice2 = input ();
+            switch (choice2)
 
-            /* else if (command == "w")
+            std::cout<<"Type what do you want to do?"<<std::endl;
+            std::cout<<"11- Check main engine's conditions."<<std::endl;
+            std::cout<<"12- Check thrusters"<<std::endl;
+            std::cout<<"13- Check Electric panels"<<std::endl;
+
+            case 11:
             {
-                standby = false;
-                std::cout<< std::string (50, '\n');
-                engine_room();
-                std::cout<<"You came to the engine room"<<std::endl;
+                
+                std::cout<<"Checking the main engine Number 1"<<std::endl;
+                std::this_thread::sleep_for (std::chrono::seconds(6));
+                std::cout<<"All functions with the main engine 1 looks great"<<std::endl;
                 std::this_thread::sleep_for (std::chrono::seconds(2));
-                std::cout<<"Do you want to do anything here?"<<std::endl;
-                std::this_thread::sleep_for (std::chrono::seconds(1));
-                std::cout<<"Type "<<std::endl;
-                std::cout<<"yes"<<std::endl;
-                std::cout<<"no"<<std::endl;
-                ///you can also change the void? but you wanna do it here then?
+                std::cout<<"Checking the main engine Number 2"<<std::endl;
+                std::this_thread::sleep_for (std::chrono::seconds(6));
+                std::cout<<"All functions with the main engine 2 looks great"<<std::endl;
+                std::this_thread::sleep_for (std::chrono::seconds(2));
+                std::cout<<"Checking the main engine number 3"<<std::endl;
+                std::this_thread::sleep_for (std::chrono::seconds(6));
+                std::cout<<"All functions with the main engine 3 looks great"<<std::endl; 
+                std::this_thread::sleep_for (std::chrono::seconds(2));
+                std::cout<<"Preparing a maintenance report, please wait."<<std::endl;
+                std::this_thread::sleep_for (std::chrono::seconds(10));
+                std::cout<<"Here is the report I prepared for you:"<<std::endl;
+                std::this_thread::sleep_for (std::chrono::seconds(3));
+                std::cout<<"ENGINE 1 || ALL FUNCTIONS - CHECKED"<<std::endl;
+                std::cout<<"ENGINE 2 || ALL FUNCTIONS - CHECKED"<<std::endl;
+                std::cout<<"ENGINE 3 || ALL FUNCTIONS - CHECKED"<<std::endl;
+                std::cout<<"^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"<<std::endl;
+                std::cout<<"ENGINE TEMP: -120F"<<std::endl;
+                std::cout<<"COMBUSTION: OK"<<std::endl;
+                std::cout<<"TESTS: PASSED"<<std::endl;
+                std::cout<<"ALL ENGINES ARE IN OPTIMUM CONDITION"<<std::endl;
+                std::cout<<"^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"<<std::endl;
+                std::cout<<"SIGN: ENIGMA AI"<<std::endl;
+                std::this_thread::sleep_for (std::chrono::nanoseconds(1700));
+                bool valid = false;
+                char PP;
+                while (!valid)
+                {
+                    std::cout<<"Type 'PP' to return to the engine room."<<std::endl;  //change the whole pattern with this.
+                    std::cin>> PP;
+
+                }
+
+
+                 //return to the void engine room
+
+            }
+
+        }
+
+    }
+
+    
+
+}
+
+            /*  // else if (command == "w") this is necessary, add this to in previous place. 
+            {
+                
+                ///you can also change the whole void? but you wanna do it here then? - I DID THIS
                 if (command == "yes")
                 {
                 std::cout<<"Choose action (type the number)"<<std::endl;
@@ -275,9 +353,6 @@ int main()
     std::cout<<" .."<<std::endl;
   
   
-  
-  //std::cout << "Hello There!\nWelcome to Leprechaun Hunt.\nThis is a text adventure game where you explore rooms to capture the leprechaun. If you haven't played before, please read the instructions so you won't be confused\n";
-  //std::this_thread::sleep_for (std::chrono::seconds(3));
   char skip;
   bool valid = false;
   while (!valid) 
@@ -301,4 +376,6 @@ int main()
       std::cout << "Unauthorized. \n";
     }
   }
+  return 0;
 }
+
