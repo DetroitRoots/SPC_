@@ -22,7 +22,13 @@ capsule = false , space_suit = true, oxygen = true, health = true , shield = tru
 
 
 //:::Add interactable objets::: feel like still so less, wanna add like 1000 at least.
+
 int input();
+int choice, choice2, num;
+
+// ^^ SWITCH FEATURES 
+
+
 int _hP = 5000; //vulnerable // character should be able to improve. | add more characters?
 int _xP = 0;
 int _ShielDCount_iron = 10000;
@@ -41,8 +47,7 @@ std::vector<std::string> hp;
 using namespace std::this_thread;
 
 
-//add int cmnd
-
+//add int cmnd --added
 
 void command_center();
 void engine_room();
@@ -160,7 +165,6 @@ void engine_room()
     bool standby = false;
     bool valid = false;
     std::string command;
-    int choice, num;
     
     std::cout<< std::string (50, '\n');
     engine_room();  //check
@@ -177,14 +181,14 @@ void engine_room()
         std::cout<<"2- Look Around"<<std::endl;
         std::cout<<"3- Check inventory"<<std::endl;
         std::cout<<"4- Nevermind"<<std::endl;
-    }  //SOLVE THE ISSUE HERE. REMOVE SWITCHES FROM CONDITIONAL STATEMENT AND TRY AGAIN.
-
+      //SOLVE THE ISSUE HERE. REMOVE SWITCHES FROM CONDITIONAL STATEMENT AND TRY AGAIN.
+       
         choice = input();
         switch (choice)
         //add switches for the engine check.
         case 1:
         {
-            int choice2, num;
+            //FIX THOSE SWITCHES AND NAMES AFTER BUGFIX
             choice2 = input ();
             switch (choice2)
 
@@ -246,7 +250,7 @@ void engine_room()
 
         }
 
-    //}
+    }
 
     
 
