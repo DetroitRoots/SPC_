@@ -22,7 +22,6 @@ capsule = false , space_suit = true, oxygen = true, health = true , shield = tru
 
 
 //:::Add interactable objets::: feel like still so less, wanna add like 1000 at least.
-
 int input();
 int _hP = 5000; //vulnerable // character should be able to improve. | add more characters?
 int _xP = 0;
@@ -178,7 +177,8 @@ void engine_room()
         std::cout<<"2- Look Around"<<std::endl;
         std::cout<<"3- Check inventory"<<std::endl;
         std::cout<<"4- Nevermind"<<std::endl;
-        
+    }  //SOLVE THE ISSUE HERE. REMOVE SWITCHES FROM CONDITIONAL STATEMENT AND TRY AGAIN.
+
         choice = input();
         switch (choice)
         //add switches for the engine check.
@@ -224,11 +224,18 @@ void engine_room()
                 std::cout<<"SIGN: ENIGMA AI"<<std::endl;
                 std::this_thread::sleep_for (std::chrono::nanoseconds(1700));
                 bool valid = false;
-                char PP;
+                char PP, back;
                 while (!valid)
                 {
                     std::cout<<"Type 'PP' to return to the engine room."<<std::endl;  //change the whole pattern with this.
                     std::cin>> PP;
+                    //if (back == 'PP') //bug
+                    {
+                        valid=true;
+                        engine_room();
+                    }
+                
+
 
                 }
 
@@ -239,7 +246,7 @@ void engine_room()
 
         }
 
-    }
+    //}
 
     
 
