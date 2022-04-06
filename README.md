@@ -1,2 +1,3 @@
 # SPC_
-developing a sci-fi game.
+
+Terminal based Sci-fi game.
